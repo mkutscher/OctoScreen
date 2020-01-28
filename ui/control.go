@@ -12,7 +12,7 @@ var control = []*octoprint.ControlDefinition{{
 	Command: "M18",
 }, {
 	Name:    "Fan On",
-	Command: "M106",
+	Command: "M106 S178",
 }, {
 	Name:    "Fan Off",
 	Command: "M106 S0",
