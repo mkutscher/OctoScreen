@@ -67,7 +67,7 @@ func (m *controlPanel) getCustomControl() []*octoprint.ControlDefinition {
 
 	for _, c := range r.Controls {
 		for _, cc := range c.Children {
-			if cc.Command != "" || cc.Script != "" {
+			if ((cc.Command != "" || cc.Commands != "") && cc.Input == nil) {
 				control = append(control, cc)
 			}
 		}
